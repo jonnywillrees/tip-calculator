@@ -9,24 +9,27 @@
                 <!-- Bill label and input -->
                 <div class="my-3">
                     <label class="form-label" for="bill">Bill</label>
-                    <input class="form-control" type="number" id="bill" name="bill" value="0">
+                    <atom-number-input [name]="'bill'" [id]="'bill'">
+                    </atom-number-input>
                 </div>
 
                 <!-- Select tip percentage -->
                 <div class="form-label">Select Tip %</div>
                 <div class="row mb-3 g-3">
-                    <div *ngFor="let percentage of tipPercentages" class="col-sm-6 col-md-4">
+                    <div *ngFor="let percentage of tipPercentages" class="col-6 col-md-4">
                         <atom-radio-button [percentage]="percentage">
                         </atom-radio-button>
                     </div>
                     <div class="col-6 col-sm-4">
-                        <input class="tip-card" type="number" placeholder="Custom">
+                        <atom-number-input [name]="'customPercentage'" [placeholder]="'Custom'">
+                        </atom-number-input>
                     </div>
                 </div>
 
                 <!-- Number of people input -->
                 <label class="form-label" for="personCount">Number of People</label>
-                <input class="form-control" type="number" name="personCount" id="personCount" value="5">
+                <atom-number-input [name]="'personCount'" [id]="'personCount'">
+                </atom-number-input>
             </div>
         </div>
         <div class="col-sm-6">
