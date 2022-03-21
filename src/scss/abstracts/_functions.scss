@@ -1,0 +1,8 @@
+// Import sass operator since '/ operator' is deprecated
+@use 'sass:math';
+
+// Convert pixel value to rem
+@function rem($pxValue) {
+    $remValue: #{math.div($pxValue, 16)}rem;
+    @return $remValue;
+}

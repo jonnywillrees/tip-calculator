@@ -1,0 +1,29 @@
+@use '../abstracts';
+
+:root {
+    @each $color, $shades in abstracts.$colors {
+        // color: $color;
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+
+    @each $screen-size, $font-size in abstracts.$type-scale {
+        @if $screen-size == small {
+            @each $size, $value in $font-size {
+                --fs-#{$size}: #{$value};
+            }
+        }
+        @else {
+            @include abstracts.media-query(small) {
+                @each $size, $value in $font-size {
+                    --fs-#{$size}: #{$value};
+                }
+            }
+        }
+    }
+}
+
+body {
+    background-color: var(--clr-neutral-300);
+}

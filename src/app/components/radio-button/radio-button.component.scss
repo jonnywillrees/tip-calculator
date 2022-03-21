@@ -1,0 +1,22 @@
+@use 'abstracts' as *;
+
+.radio {
+    input {
+        display: none;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: rem(65);
+        border: 3px solid transparent;
+        border-radius: rem(10);
+        position: relative;
+        box-shadow: 0 0 20px #c3c3c367;
+        background-color: var(--clr-neutral-600);
+        color: var(--clr-neutral-100);
+        cursor: pointer;
+    }
+}

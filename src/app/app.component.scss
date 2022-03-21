@@ -1,0 +1,68 @@
+@use 'abstracts' as *;
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--fs-600);
+    color: var(--clr-neutral-500);
+    letter-spacing: 4px;
+    margin: 0.4em 0;
+    line-height: 1.1;
+}
+
+.card {
+    background-color: var(--clr-neutral-100);
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: rem(15);
+    align-items: stretch;
+
+    
+    @include media-query(small) {
+        border-radius: 20px;
+    }
+}
+
+.inputs {
+    margin-bottom: rem(30);
+}
+
+.tip-card {
+    display: block;
+    width: 100%;
+}
+
+.form-label {
+    display: block;
+    color: var(--clr-neutral-400);
+    margin-bottom: 0.4em;
+}
+
+.form-control {
+    outline: none;
+    border: none;
+    background-color: var(--clr-neutral-200);
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    color: var(--clr-neutral-600);
+    width: 100%;
+    text-align: right;
+    font-size: var(--fs-500);
+}
+
+.outputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--clr-neutral-200);
+    border-radius: 20px;
+    padding: rem(25);
+    background-color: var(--clr-neutral-600);
+    height: 100%;
+}
+
+.btn {
+    display: flex;
+}
